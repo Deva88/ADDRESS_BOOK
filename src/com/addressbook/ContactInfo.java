@@ -26,7 +26,8 @@ public class ContactInfo {
 		this.CONTACT_NUMBER=mob;
 		this.EMAIL=mail;
 	}
-
+	// to print the contact details
+		@Override
 	public String toString() {
 		return String.format(FIRST_NAME+" "+LAST_NAME+" "+ADDRESS+" "+CITY+" "+STATE+" "+POSTAL_CODE+" "
 									 +COUNTRY+" "+CONTACT_NUMBER+" "+EMAIL);
