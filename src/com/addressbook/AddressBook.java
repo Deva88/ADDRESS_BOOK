@@ -33,8 +33,7 @@ public  class AddressBook {
 	 }
 	
 	/*
-	 * To update existing contact details by taking input from user checking first
-	 * is address book is empty, if not then passing the name of the contact whose
+	 * To update existing contact details by taking input from user 
 	 * details user wants to edit and also checking if the name entered by user
 	 * exist is Address Book or not
 	 */
