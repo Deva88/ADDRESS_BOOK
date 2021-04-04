@@ -62,6 +62,10 @@ public  class AddressBook {
 		System.out.println("Your changes replicated to the Book manager successfully....");
 		
 	}
+	/*
+	 * deleting contact by name given by user and also checking whether address book
+	 * is empty or not
+	 */
 	void remove(int increment)
 	{
 		int flag;
@@ -83,6 +87,10 @@ public  class AddressBook {
 			System.out.println(increment+" "+contactList[increment]);
 		}
 	}
+	/*
+	 * using case in loop so that user can enter its choices to add, delete, edit or
+	 * print the contact in address book
+	 */
 public static void main(String args[]){
 	System.out.println("---------------WELCOME TO THE ADDRESS_BOOK_MANAGEMENT SYSTEM-------------"); 
 	Scanner sc=new Scanner(System.in);
