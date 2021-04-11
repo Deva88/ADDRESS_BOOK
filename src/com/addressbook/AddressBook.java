@@ -39,10 +39,10 @@ public  class AddressBook {
 	 */
 	void Edit(int increment)
 	{
-		int flag;
-		for(flag=0;flag<10;flag++)
+		int i;
+		for(i=0;i<10;i++)
 		{
-			if(flag==increment)
+			if(i==increment)
 			{
 			
 			System.out.println("Enter First Name:");
