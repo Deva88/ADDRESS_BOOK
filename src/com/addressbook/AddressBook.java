@@ -11,11 +11,11 @@ public  class AddressBook {
 	static ArrayList listing = new ArrayList();
 	public static Scanner sc = new Scanner(System.in);
 	static AddressBook addressBook = new AddressBook();
-	static  final int i=0;
+	//create one addContact() method 
 	public void addContact() {
 		System.out.println("Enter how many persons you want to add");
 		int numOfPerson=sc.nextInt();
-		for(int i=0; i<=numOfPerson; i++)
+		for(int i=0; i<numOfPerson; i++)
 		{
 			System.out.println("\nPerson :  "+i+" Enter First Name");
 			String fn= sc.next();

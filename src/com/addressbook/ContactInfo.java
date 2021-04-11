@@ -29,7 +29,7 @@ public class ContactInfo {
 
 	public String toString() {
 		return String.format(FIRST_NAME+" "+LAST_NAME+" "+ADDRESS+" "+CITY+" "+STATE+" "+POSTAL_CODE+" "
-									 +COUNTRY+" "+CONTACT_NUMBER+" "+EMAIL);
+				+COUNTRY+" "+CONTACT_NUMBER+" "+EMAIL);
 	}
 
 }
