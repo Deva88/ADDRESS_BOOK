@@ -5,32 +5,28 @@ package com.addressbook;
  */
 
 public class ContactInfo {
-	String FIRST_NAME;
-	String LAST_NAME;
-	String ADDRESS;
-	String CITY;
-	String STATE;
-	String POSTAL_CODE;
-	String COUNTRY;
-	String CONTACT_NUMBER;
-	String EMAIL;
-	ContactInfo(String firstname,String lastname,String address,String city,String state,String zipcode,String country,String mob,String mail)
-	{
-		this.FIRST_NAME=firstname;
-		this.LAST_NAME=lastname;
-		this.ADDRESS=address;
-		this.CITY=city;
-		this.STATE=state;
-		this.POSTAL_CODE=zipcode;
-		this.COUNTRY=country;
-		this.CONTACT_NUMBER=mob;
-		this.EMAIL=mail;
-	}
-	// to print the contact details
-		@Override
-	public String toString() {
-		return String.format(FIRST_NAME+" "+LAST_NAME+" "+ADDRESS+" "+CITY+" "+STATE+" "+POSTAL_CODE+" "
-				+COUNTRY+" "+CONTACT_NUMBER+" "+EMAIL);
-	}
 
+    public final String firstName;
+    public final String lastName;
+    public final String address;
+    public final String city;
+    public final String state;
+    public final int zip;
+    public final long phoneNumber;
+    public final String email;
+
+    public ContactInfo(String firstName, String lastName, String address, String city, String state, int zip, long phoneNumber, String email){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+
+    public String toString(){
+        return "First Name : " +this.firstName + "\nLast Name : " +this.lastName + "\nAddress : " +this.address + "\nCity : " +city + "\nState : " +this.state + "\nZip : " +this.zip + "\nPhone Number : " +this.phoneNumber + "\nEmail : " +this.email;
+    }
 }
