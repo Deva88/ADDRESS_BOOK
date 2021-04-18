@@ -15,6 +15,7 @@ public class AddressBook {
 
     /*
 	 * Using addContact() method in  address book
+	 * add multiple Address Book to the System. Each Address Book has a unique Name
 	 */
     public void addContact () {
         System.out.println("Enter Number of person you want to add");
