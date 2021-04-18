@@ -6,7 +6,7 @@ package com.addressbook;
 
 public class ContactInfo {
 
-    public final String firstName;
+	public final String firstName;
     public final String lastName;
     public final String address;
     public final String city;
