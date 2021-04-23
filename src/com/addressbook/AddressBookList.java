@@ -1,11 +1,22 @@
 package com.addressbook;
-import java.util.HashMap;
+public class AddressBookList
+{
+    public String userInputBookName;
 
-public class AddressBookList<addressBook> {
-
-    private final Object addressBook;
-    public AddressBookList(Object addressBook)
+    public AddressBookList(String userInputBookName)
     {
-        this.addressBook = addressBook;
+        this.userInputBookName = userInputBookName;
+    }
+    public String getUserInputBookName()
+    {
+        return  userInputBookName;
+    }
+    public void setUserInputBookName(String firstName)
+    {
+        this.userInputBookName = userInputBookName;
+    }
+    public String toString()
+    {
+        return "AddressBookName:" + userInputBookName + "\n";
     }
 }
