@@ -6,7 +6,7 @@ package com.addressbook;
 
 public class ContactInfo {
 
-	public final String firstName;
+    public final String firstName;
     public final String lastName;
     public final String address;
     public final String city;
@@ -25,6 +25,7 @@ public class ContactInfo {
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
+    
 
     public String toString(){
         return "First Name : " +this.firstName + "\nLast Name : " +this.lastName + "\nAddress : " +this.address + "\nCity : " +city + "\nState : " +this.state + "\nZip : " +this.zip + "\nPhone Number : " +this.phoneNumber + "\nEmail : " +this.email;
