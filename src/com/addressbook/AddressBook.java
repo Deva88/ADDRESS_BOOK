@@ -1,12 +1,16 @@
 package com.addressbook;
 import java.util.*;
+import java.util.stream.Collectors;
+
+/*@Description- this class represents a address book.
+ *contact information  */
 
 public class AddressBook {
 	 public ArrayList<ContactInfo> contactbook = new ArrayList<>();
 	    ArrayList<AddressBookList> addressBookNameList = new ArrayList<>();
 	    Scanner scan = new Scanner(System.in);
 	    
-	    //create method addContact()
+	    /* @Description- Add new contacts in address book  */
 	    public void addContact()
 	    {
 	    	System.out.println("Enter First Name");
@@ -31,8 +35,6 @@ public class AddressBook {
 	        System.out.println("Contact added Successfully");
 	        System.out.println("\n You can add multiple person's entry");
 	    }
-	    
-	    //create displayPerson() method
 	    public void displayPerson()
 	    {
 	        System.out.println("\nEntered Person Details is:");
@@ -41,8 +43,8 @@ public class AddressBook {
 	            System.out.println(person.toString());
 	        }
 	    }
-
-	    //create editPerson() method
+	    
+	    /* Description - edit contacts address book */
 	    public void editPerson()
 	    {
 	    	System.out.println("\n enter First name to edit details:");
@@ -92,7 +94,7 @@ public class AddressBook {
 	        }
 	    }
 
-	  //create deletePerson() method
+	    /* Description - delete contacts in address book  using their name */
 	    public void deletePerson()
 	    {
 	    	System.out.println("enter First name to delete details:");
@@ -111,7 +113,7 @@ public class AddressBook {
 	        }
 	    }
 
-	  //create newAddessBook() method
+	    /* Description - to create new address book */
 	    public void newAddressBook()
 	    {
 	        System.out.println("Enter AddressBook Name");
@@ -120,6 +122,8 @@ public class AddressBook {
 	        addressBookNameList.add(addressbook);
 	        System.out.println("New Address Book Name is added to list");
 	    }
+	    
+	    /* Description - to Display  person in Address Book list */
 	    public void displayAddressBook()
 	    {
 	    	System.out.println("Existing AddressBook Names are : ");
@@ -129,6 +133,7 @@ public class AddressBook {
 	        }
 	    }
 
+	    /* to check duplicate entry if find duplicate are not allowed */
 	    public void duplicateCheck(String first)
 	    {
 	       for (int k = 0; k < contactbook.size(); k++)
@@ -146,6 +151,7 @@ public class AddressBook {
 	       }
 	    }
 
+	    /* Description - to search person by city name */
 	    public void searchPersonByCity()
 	    {
 	        System.out.println("Enter City name to search Person by city name");
@@ -158,6 +164,8 @@ public class AddressBook {
 	            System.out.println("Name : " + i.nextElement());
 	        }
 	    }
+	    
+	    /* Description - to search person by state wise */
 	    public void searchPersonByState()
 	    {
 	        System.out.println("Enter the state name to search Person by state name");
@@ -170,7 +178,18 @@ public class AddressBook {
 	            System.out.println("Name : " + i.nextElement());
 	        }
 	    }
+	    /* Description - to count  person by city name */
+	    public void countByCity(){
+			System.out.println(contactbook.stream().collect(Collectors.groupingBy((ContactInfo C) -> C.getCity())));
+			System.out.println((contactbook.stream().collect(Collectors.groupingBy((ContactInfo C) -> C.getCity(),Collectors.counting()))));
+	    }
 	    
+	    /* Description - to count  person by state name */
+	    public void countByState(){
+	    	System.out.println(contactbook.stream().collect(Collectors.groupingBy((ContactInfo C) ->C.getState(),Collectors.counting())));
+
+	    }
+
 	    public static void main(String[] args)
 	    {
 	        System.out.println("-------------Welcome To The Address Book Problem--------------------");
@@ -184,7 +203,9 @@ public class AddressBook {
 	        System.out.println("6.Display New Address Book");
 	        System.out.println("7.Search Person By City");
 	        System.out.println("8. Search Person By State");
-	        System.out.println("9.Exit");
+	        System.out.println("9.Count by city");
+	        System.out.println("10.Count by state");
+	        System.out.println("11.Exit");
 	        int k=0;
 	        while(k==0)
 	        {
@@ -217,7 +238,13 @@ public class AddressBook {
 	                case 8:
 	                    address.searchPersonByState();
 	                    break;
-	                case 9:
+						 case 9:
+						     address.countByCity();
+						     break;
+					    case 10:
+					     	  address.countByState();
+						     break;
+	                case 11:
 	                    System.out.println("Exit");
 	                    k = 1;
 	                    break;
